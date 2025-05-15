@@ -15,3 +15,10 @@ git fetch origin
 git log HEAD..origin/main --oneline
 
 case 2: when you have changed in ur local repository and want to reflect in remote repository do this push
+
+
+Always use below when you want to commit.
+git add .
+git commit -m "I am adding the text content of my file back again"
+git push origin main
+git status
