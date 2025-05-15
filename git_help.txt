@@ -10,9 +10,10 @@ If you’re ahead/behind the GitHub repo)
 
 case 1: when you have added detail in github and want to reflect in your computer folder then do pull and follow below steps 
 
+git fetch origin ((this will fetch the changes made in remote and below will help to commit those in local repo and will help you to shoew the message king of write and display command))
 git pull origin main(here origin is your remote and main is your local)
-git fetch origin
-git log HEAD..origin/main --oneline
+git staus
+
 
 case 2: when you have changed in ur local repository and want to reflect in remote repository do this push
 
