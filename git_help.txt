@@ -1,0 +1,17 @@
+git remote -v // This command will show the GitHub repository your local folder is connected to:
+git branch  //Use this command to see the current branch(main or master)
+             //If you see * main, you're on the main branch. If it shows nothing, you may not have committed yet.
+            git push
+git status (This tells you:
+Which files are changed
+If you're on a branch
+If you’re ahead/behind the GitHub repo)
+
+
+case 1: when you have added detail in github and want to reflect in your computer folder then do pull and follow below steps 
+
+git pull origin main(here origin is your remote and main is your local)
+git fetch origin
+git log HEAD..origin/main --oneline
+
+case 2: when you have changed in ur local repository and want to reflect in remote repository do this push
