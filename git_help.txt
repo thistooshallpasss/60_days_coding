@@ -22,3 +22,69 @@ git add .
 git commit -m "I am adding the text content of my file back again"
 git push origin main
 git status
+
+If you want to **check whether your local repository is ahead or behind** the remote (e.g., GitHub), Git makes this easy.
+
+---
+
+## ✅ To Check Who Is Ahead or Behind:
+
+### Run:
+
+```bash
+git status
+```
+
+If your local repo is ahead, you'll see:
+
+```
+Your branch is ahead of 'origin/main' by X commits.
+  (use "git push" to publish your local commits)
+```
+
+If you're **behind**, you'll see:
+
+```
+Your branch is behind 'origin/main' by X commits.
+  (use "git pull" to update your local branch)
+```
+
+If you're **diverged** (both local and remote changed differently), you'll see:
+
+```
+Your branch and 'origin/main' have diverged,
+and have X and Y different commits each, respectively.
+```
+
+---
+
+## 🔍 More Detailed View
+
+### See commits ahead/behind with:
+
+```bash
+git log origin/main..HEAD --oneline   # shows commits ahead of origin
+git log HEAD..origin/main --oneline   # shows commits behind origin
+```
+
+### Show both in one line:
+
+```bash
+git fetch origin
+git status
+```
+
+---
+
+## 📌 Summary
+
+| Situation  | Meaning                               | What to do      |
+| ---------- | ------------------------------------- | --------------- |
+| Ahead      | You have local commits not yet pushed | `git push`      |
+| Behind     | Remote has new commits                | `git pull`      |
+| Diverged   | Both have changed differently         | Manual merge    |
+| Up to date | Both are the same                     | Nothing to do ✅ |
+
+---
+
+Let me know if you want help **resolving divergence or conflicts**.
